@@ -27,8 +27,9 @@ form.addEventListener('submit', evt => {
   getImagesByQuery(searchWord)
     .then(makeMarkup)
     .catch(error => console.log(error));
+  form.reset();
+  submitBtn.disabled = true;
 });
-// submitBtn.disabled = true;
 
 // ===================================================================
 // ПОДІЯ інпут

@@ -16,7 +16,7 @@
     flex-grow: 1;
     width: calc((100% - 48px) / 3);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: 12px;
     overflow: hidden;
     background-color: #fff;
     transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
@@ -38,7 +38,7 @@
 }
 
 .desc-container {
-    padding: 8px 12px;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -48,36 +48,24 @@
     flex-wrap: wrap;
     gap: 8px;
     height: auto;
+    justify-content: space-evenly;
 
 }
 
 .desc-list {
     display: flex;
-    gap: 12px;
     padding: 0;
     margin: 0;
     list-style: none;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
-    margin-bottom: 4px;
-
 }
 
-.Likes {
+.icons {
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-}
-
-.Views {
-    font-weight: 500;
-
-}
-
-.Comments {
-    font-weight: 500;
-}
-
-.Downloads {
-    font-weight: 500;
 }

@@ -1,6 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 const loader = document.querySelector('.loader');
 const gallery = document.querySelector('.gallery');
 
@@ -29,10 +32,18 @@ export function createGallery(images) {
             </div>
             <div class="desc-container">
               <ul class="desc-list">
-              <li class="Likes">Likes: <span>${likes}</span></li>
-              <li class="Views">Views: <span>${views}</span></li>
-              <li class="Comments">Comments: <span>${comments}</span></li>
-              <li class="Downloads">Downloads: <span>${downloads}</span></li>
+              <li class="icons"><svg class="icon" width="24" height="24">
+            <use href="./img/symbol-defs.svg#icon-like"></use>
+          </svg><span>${likes}</span></li>
+              <li class="icons"><svg class="icon" width="24" height="24">
+            <use href="./img/symbol-defs.svg#icon-views"></use>
+          </svg><span>${views}</span></li>
+              <li class="icons"><svg class="icon" width="24" height="24">
+            <use href="./img/symbol-defs.svg#icon-comments"></use>
+          </svg><span>${comments}</span></li>
+              <li class="icons"><svg class="icon" width="24" height="24">
+            <use href="./img/symbol-defs.svg#icon-downloads"></use>
+          </svg><span>${downloads}</span></li>
               </ul>
             </div>
           </li>`;
