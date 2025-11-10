@@ -1,6 +1,3 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-
 import { getImagesByQuery } from './js/pixabay-api.js';
 import { clearGallery, showLoader, makeMarkup } from './js/render-functions.js';
 
@@ -8,7 +5,15 @@ import { clearGallery, showLoader, makeMarkup } from './js/render-functions.js';
 // БАЗА
 const form = document.querySelector('.form');
 const submitBtn = document.querySelector('button[type=submit]');
+const input = document.querySelector('input[name="search-text"]');
 
+submitBtn.disabled = true;
+
+// ===================================================================
+// ПОДІЯ інпут
+input.addEventListener('input', evt => {
+  submitBtn.disabled = evt.target.value.trim() === '';
+});
 // ===================================================================
 // ПОДІЯ сабміт
 form.addEventListener('submit', evt => {
@@ -29,18 +34,4 @@ form.addEventListener('submit', evt => {
     .catch(error => console.log(error));
   form.reset();
   submitBtn.disabled = true;
-});
-
-// ===================================================================
-// ПОДІЯ інпут
-form.addEventListener('input', evt => {
-  const searchWord = evt.target.value.trim();
-  submitBtn.disabled = !searchWord;
-  if (!searchWord) {
-    iziToast.show({
-      message: 'Please fill in the field to begin your search.',
-      position: 'topRight',
-      backgroundColor: 'rgb(255, 215, 163)',
-    });
-  }
 });
