@@ -9,7 +9,7 @@ import{a as m,S as f,i as h}from"./assets/vendor-MgecxatS.js";(function(){const 
             <use href="/icons.svg#icon-like"></use>
           </svg><span>${t}</span></li>
               <li class="icons"><svg class="icon" width="24" height="24">
-            <use href="/icons.svg#icon-views"></use>
+            <use href="/public/icons.svg#icon-views"></use>
           </svg><span>${n}</span></li>
               <li class="icons"><svg class="icon" width="24" height="24">
             <use href="/icons.svg#icon-comments"></use>
