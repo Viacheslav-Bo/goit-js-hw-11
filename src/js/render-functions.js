@@ -4,7 +4,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import sprite from '../img/icons.svg';
+import spriteUrl from '../img/icons.svg?url';
 
 const loader = document.querySelector('.loader');
 const gallery = document.querySelector('.gallery');
@@ -35,16 +35,16 @@ export function createGallery(images) {
             <div class="desc-container">
               <ul class="desc-list">
               <li class="icons"><svg class="icon" width="24" height="24">
-            <use href="${sprite}#icon-like"></use>
+            <use href="${spriteUrl}#icon-like"></use>
           </svg><span>${likes}</span></li>
               <li class="icons"><svg class="icon" width="24" height="24">
-            <use href="${sprite}#icon-views"></use>
+            <use href="${spriteUrl}#icon-views"></use>
           </svg><span>${views}</span></li>
               <li class="icons"><svg class="icon" width="24" height="24">
-            <use href="${sprite}#icon-comments"></use>
+            <use href="${spriteUrl}#icon-comments"></use>
           </svg><span>${comments}</span></li>
               <li class="icons"><svg class="icon" width="24" height="24">
-            <use href="${sprite}#icon-downloads"></use>
+            <use href="${spriteUrl}#icon-downloads"></use>
           </svg><span>${downloads}</span></li>
               </ul>
             </div>
